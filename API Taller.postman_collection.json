@@ -10,7 +10,7 @@
 			"name": "Estudiantes",
 			"item": [
 				{
-					"name": "Get todos los estudiantes",
+					"name": "Mostrar todos los estudiantes",
 					"protocolProfileBehavior": {
 						"disabledSystemHeaders": {
 							"accept": true
@@ -26,7 +26,7 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer 1|2ZnFb0BauVE8FWGSHhudkcxPuwof5gzafJSsDGnv6b57cd14",
+								"value": "Bearer 1|eqKWL6mOZEqKVNFJoTSkduH4lSAcUMKudckIL7n19df9ad42",
 								"type": "text"
 							}
 						],
@@ -49,7 +49,7 @@
 					"response": []
 				},
 				{
-					"name": "Get mostrar un estudiante",
+					"name": "Mostrar un estudiante",
 					"protocolProfileBehavior": {
 						"disabledSystemHeaders": {
 							"accept": true
@@ -65,12 +65,12 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer 1|2ZnFb0BauVE8FWGSHhudkcxPuwof5gzafJSsDGnv6b57cd14",
+								"value": "Bearer 1|eqKWL6mOZEqKVNFJoTSkduH4lSAcUMKudckIL7n19df9ad42",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/estudiantes/1",
+							"raw": "http://127.0.0.1:8000/api/estudiantes/2",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -82,7 +82,7 @@
 							"path": [
 								"api",
 								"estudiantes",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -105,13 +105,13 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer 1|2ZnFb0BauVE8FWGSHhudkcxPuwof5gzafJSsDGnv6b57cd14",
+								"value": "Bearer 1|eqKWL6mOZEqKVNFJoTSkduH4lSAcUMKudckIL7n19df9ad42",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Erika\",\r\n    \"apellido\": \"Pelaez\",\r\n    \"edad\": 24,\r\n    \"correo\": \"erikapelaez8@gmail.com\",\r\n    \"direccion\": \"Cra 33 #19-40\",\r\n    \"fecha_nacimiento\": \"1999-06-29\",\r\n    \"genero\": \"Femenino\",\r\n    \"activo\": 1,\r\n    \"promedio\": 4.5\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Estudiante\",\r\n    \"apellido\": \"Prueba\",\r\n    \"edad\": 22,\r\n    \"correo\": \"estudianteprueba1@gmail.com\",\r\n    \"direccion\": \"Cra 23 #19-53\",\r\n    \"fecha_nacimiento\": \"1999-06-30\",\r\n    \"genero\": \"Masculino\",\r\n    \"activo\": 1,\r\n    \"promedio\": 3.5,\r\n    \"categoria_id\": 21\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -153,13 +153,62 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer 1|2ZnFb0BauVE8FWGSHhudkcxPuwof5gzafJSsDGnv6b57cd14",
+								"value": "Bearer 1|eqKWL6mOZEqKVNFJoTSkduH4lSAcUMKudckIL7n19df9ad42",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Sebastian\",\r\n    \"apellido\": \"Cardona\",\r\n    \"edad\": 25,\r\n    \"correo\": \"sebastiancg11@gmail.com\",\r\n    \"direccion\": \"Cra 25 #23-15\",\r\n    \"fecha_nacimiento\": \"1998-09-16\",\r\n    \"genero\": \"Masculino\",\r\n    \"activo\": 1,\r\n    \"promedio\": 4.0\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Sebastian\",\r\n    \"apellido\": \"Cardona\",\r\n    \"edad\": 25,\r\n    \"correo\": \"scardonag11@gmail.com\",\r\n    \"direccion\": \"Cra 24 #31-20\",\r\n    \"fecha_nacimiento\": \"1998-09-16\",\r\n    \"genero\": \"Masculino\",\r\n    \"activo\": 1,\r\n    \"promedio\": 3.3,\r\n    \"categoria_id\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/estudiantes/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"estudiantes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar estudiante",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|eqKWL6mOZEqKVNFJoTSkduH4lSAcUMKudckIL7n19df9ad42",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -184,9 +233,190 @@
 						}
 					},
 					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categorias",
+			"item": [
+				{
+					"name": "Mostrar todas las categorias",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|eqKWL6mOZEqKVNFJoTSkduH4lSAcUMKudckIL7n19df9ad42",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/categorias",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"categorias"
+							]
+						}
+					},
+					"response": []
 				},
 				{
-					"name": "Eliminar estudiante",
+					"name": "Mostrar una categoria",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|eqKWL6mOZEqKVNFJoTSkduH4lSAcUMKudckIL7n19df9ad42",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/categorias/11",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"categorias",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guardar categoria",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|eqKWL6mOZEqKVNFJoTSkduH4lSAcUMKudckIL7n19df9ad42",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n    {\r\n        \"nombre\": \"prueba \",\r\n        \"descripcion\": \"categoria de prueba\",\r\n        \"prioridad\": 5,\r\n        \"activo\": 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/categorias",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar categoria",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|eqKWL6mOZEqKVNFJoTSkduH4lSAcUMKudckIL7n19df9ad42",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"prueba 2\",\r\n    \"descripcion\": \"categoria de prueba 2\",\r\n    \"prioridad\": 7,\r\n    \"activo\": 0\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/categorias/11",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"categorias",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar categoria",
 					"protocolProfileBehavior": {
 						"disabledSystemHeaders": {
 							"accept": true

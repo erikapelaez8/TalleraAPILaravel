@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EstudianteController;
+use App\Http\Controllers\CategoriaController;
 
 
 Route::get('/user', function (Request $request) {
@@ -20,8 +21,14 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::delete('/estudiantes/{id}', [EstudianteController::class, 'destroy']);
 }); */
 
-//Proteger las rutas de la API que deseas autenticar
+//Rutas del controlador Estudiante
 Route::apiResource('estudiantes', \App\Http\Controllers\EstudianteController::class)
                     ->middleware('auth:sanctum');
+
+//Rutas del controlador Categoria
+Route::apiResource('/categorias', CategoriaController::class)
+                    ->middleware('auth:sanctum');
+                    
+
 
 Route::post('/login', [\App\Http\Controllers\LoginController::class, 'login']);

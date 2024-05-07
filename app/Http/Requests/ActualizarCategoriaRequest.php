@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ActualizarEstudianteRequest extends FormRequest
+class ActualizarCategoriaRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,15 +23,9 @@ class ActualizarEstudianteRequest extends FormRequest
     {
         return [
             'nombre' => 'string|max:255',
-            'apellido' => 'string|max:255',
-            'edad' => 'integer|min:18|max:99',
-            'correo' => 'string|email|max:255|unique:estudiantes,correo,' . $this->route('estudiante'),
-            'direccion' => 'nullable|string|max:255',
-            'fecha_nacimiento' => 'date',
-            'genero' => 'string|in:Masculino,Femenino,Otro',
+            'descripcion' => 'nullable|string|max:255',
+            'prioridad' => 'integer',
             'activo' => 'boolean',
-            'promedio' => 'nullable|numeric|min:0|max:5',
-            'categoria_id' => 'nullable|exists:categorias,id',
         ];
     }
 }

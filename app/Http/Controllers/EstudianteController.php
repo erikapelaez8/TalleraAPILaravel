@@ -31,7 +31,8 @@ class EstudianteController extends Controller
      */
     public function show($id)
     {
-        $estudiante = Estudiante::findOrFail($id);
+        /* $estudiante = Estudiante::findOrFail($id); */
+        $estudiante = Estudiante::with('categoria')->findOrFail($id);
         return response()->json($estudiante);
     }
 
